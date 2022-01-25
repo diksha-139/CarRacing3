@@ -1,7 +1,7 @@
 class Form {
 
   constructor() {
-    this.input = createInput("Name");
+    this.input = createInput("").attribute("placeholder","Name");
     this.button = createButton('Play');
     this.greeting = createElement('h2');
     this.title = createElement('h2');
@@ -37,6 +37,10 @@ class Form {
     this.reset.mousePressed(()=>{
       player.updateCount(0);
       game.update(0);
+      database.ref('/').update({
+        CarsAtEnd:0, 
+      players:null
+      })
     });
 
   }
