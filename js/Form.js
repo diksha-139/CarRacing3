@@ -4,7 +4,9 @@ class Form {
     this.input = createInput("").attribute("placeholder","Name");
     this.button = createButton('Play');
     this.greeting = createElement('h2');
-    this.title = createElement('h2');
+    this.title = createElement('h2').style("color","brown")
+    this.title.style("font-size","80px")
+    this.title.style("margin-left","0px")
     this.reset = createButton('Reset');
   }
   hide(){
